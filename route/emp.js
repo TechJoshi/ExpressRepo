@@ -9,10 +9,13 @@ router.get('/',(request,response)=>{
   connection.query(statement,(err,data)=>{
       if(err==null)
       {
+          console.log("changed..");
+          
           response.send(JSON.stringify(data));
       }
       else
       {
+        console.log("changed..");
           response.send(JSON.stringify(err))
       }
   })
